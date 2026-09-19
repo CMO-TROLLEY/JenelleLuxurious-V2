@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 32 43% 97%;
+    --foreground: 345 25% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 345 25% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 345 25% 18%;
+
+    --primary: 343 75% 28%;
+    --primary-foreground: 30 40% 98%;
+
+    --secondary: 340 35% 95%;
+    --secondary-foreground: 345 25% 20%;
+
+    --muted: 30 25% 94%;
+    --muted-foreground: 345 10% 45%;
+
+    --accent: 340 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 343 75% 28%;
+
+    --rose: 347 77% 55%;
+    --rose-light: 347 80% 72%;
+    --rose-dark: 347 70% 40%;
+    --gold: 38 55% 55%;
+    --gold-light: 40 60% 72%;
+    --cream: 35 50% 96%;
+    --warm-white: 40 30% 99%;
+    --plum: 345 25% 18%;
+    --plum-light: 345 20% 35%;
+
+    --chart-1: 343 75% 28%;
+    --chart-2: 347 77% 55%;
+    --chart-3: 38 55% 55%;
+    --chart-4: 180 30% 45%;
+    --chart-5: 30 20% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  .font-sans { font-family: 'Inter', system-ui, sans-serif; }
+  .text-balance { text-wrap: balance; }
+  .gradient-warm { background: linear-gradient(135deg, hsl(35 50% 96%) 0%, hsl(340 35% 95%) 100%); }
+  .gradient-rose { background: linear-gradient(135deg, hsl(347 77% 55%) 0%, hsl(343 75% 28%) 100%); }
+  .gradient-rose-soft { background: linear-gradient(135deg, hsl(347 80% 72%) 0%, hsl(340 70% 50%) 100%); }
+  .shadow-soft { box-shadow: 0 2px 8px -2px hsl(345 25% 18% / 0.08), 0 4px 16px -4px hsl(345 25% 18% / 0.06); }
+  .shadow-card { box-shadow: 0 1px 3px -1px hsl(345 25% 18% / 0.06), 0 8px 24px -8px hsl(345 25% 18% / 0.08); }
+  .shadow-glow { box-shadow: 0 0 0 1px hsl(347 77% 55% / 0.15), 0 4px 20px -4px hsl(347 77% 55% / 0.2); }
+  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
